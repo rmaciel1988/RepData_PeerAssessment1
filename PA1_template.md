@@ -1,3 +1,6 @@
+
+
+```r
 ---
 title: "Exploratory Data Analysis - course project 1"
 author: "Reinaldo Maciel"
@@ -16,7 +19,14 @@ output: html_document
 
 
 #Loading the Data.
+```
 
+```
+## Error: <text>:8:1: unexpected '=='
+## 7: 
+## 8: ==
+##    ^
+```
 
 ```r
 # reading the file
@@ -43,7 +53,7 @@ sum_steps <- aggregate(steps ~ date, df, sum)
 hist(sum_steps$steps, main = paste("Total Steps Each Day"), col="green", xlab="Total of Steps")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 ### Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -81,7 +91,7 @@ steps_by_interval <- aggregate(steps ~ interval, df, mean)
 plot(steps_by_interval$interval,steps_by_interval$steps, type="l", xlab="Interval", ylab="Number of Steps",main="Average Number of Steps per Day by Interval")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
 
 
 
@@ -153,7 +163,7 @@ totalSteps2 <- aggregate(steps ~ date, data = Filled, sum)
 hist(totalSteps2$steps, main = paste("Total Steps Each Day"), col="blue", xlab="Total of Steps")
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
 
 
 ```r
@@ -203,5 +213,6 @@ stepsInterval2 = aggregate(steps ~ interval + day, Filled, mean)
 xyplot(steps ~ interval | factor(day), data = stepsInterval2, aspect = 1/2, type = "l")
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png)
+```
 
