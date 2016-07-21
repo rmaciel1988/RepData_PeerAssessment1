@@ -12,10 +12,6 @@ output: html_document
 
 
 
-<BR>
-<BR>
-<BR>
-<BR>
 
 
 #Loading the Data.
@@ -42,8 +38,7 @@ df <- read.csv("activity.csv")
 ```
 
 
-<BR>
-<BR>
+
 
 # What is mean total number of steps taken per day?
 
@@ -75,8 +70,6 @@ print(paste("The median is:", median(sum_steps$steps), sep = " "))
 ```
 
 
-<BR>
-<BR>
 
 # What is the average daily activity pattern?
 
@@ -103,10 +96,7 @@ print(paste("The 5-minute interval with the maximum number of steps is:", steps_
 ## [1] "The 5-minute interval with the maximum number of steps is: 835"
 ```
 
-<BR>
-<BR>
-<BR>
-<BR>
+
 
 
 # Imputing missing values
@@ -187,8 +177,7 @@ print(paste("This is the median:", median(totalSteps2$steps), sep = " "))
 
  The **mean** value is the same as the value before imputing missing data because we put the mean value for that particular 5-min interval. The median value shows a little difference : but it **depends on where the missing values are.**
 
-<BR>
-<BR>
+
 
 **_Are there diferences in activity patterns between weekdays and weekends?_**
 

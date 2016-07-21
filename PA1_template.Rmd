@@ -1,3 +1,5 @@
+
+```{r }
 ---
 title: "Exploratory Data Analysis - course project 1"
 author: "Reinaldo Maciel"
@@ -9,10 +11,6 @@ output: html_document
 
 
 
-<BR>
-<BR>
-<BR>
-<BR>
 
 
 #Loading the Data.
@@ -33,8 +31,7 @@ df <- read.csv("activity.csv")
 ```
 
 
-<BR>
-<BR>
+
 
 # What is mean total number of steps taken per day?
 
@@ -52,8 +49,6 @@ print(paste("The median is:", median(sum_steps$steps), sep = " "))
 ```
 
 
-<BR>
-<BR>
 
 # What is the average daily activity pattern?
 
@@ -72,10 +67,7 @@ plot(steps_by_interval$interval,steps_by_interval$steps, type="l", xlab="Interva
 print(paste("The 5-minute interval with the maximum number of steps is:", steps_by_interval[which.max(steps_by_interval$steps),1], sep = " "))
 ```
 
-<BR>
-<BR>
-<BR>
-<BR>
+
 
 
 # Imputing missing values
@@ -136,8 +128,7 @@ print(paste("This is the median:", median(totalSteps2$steps), sep = " "))
 
  The **mean** value is the same as the value before imputing missing data because we put the mean value for that particular 5-min interval. The median value shows a little difference : but it **depends on where the missing values are.**
 
-<BR>
-<BR>
+
 
 **_Are there diferences in activity patterns between weekdays and weekends?_**
 
@@ -158,5 +149,6 @@ Filled$day = factor(Filled$day, levels = c("weekday", "weekend"))
 library(lattice)
 stepsInterval2 = aggregate(steps ~ interval + day, Filled, mean)
 xyplot(steps ~ interval | factor(day), data = stepsInterval2, aspect = 1/2, type = "l")
+```
 ```
 
